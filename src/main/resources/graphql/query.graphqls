@@ -1,0 +1,96 @@
+type Query {
+    productSearch(
+        context: ContextInput!
+        criteria: ProductSearchCriteriaInput
+    ): ProductSearchResults!
+}
+
+input ContextInput {
+    currency: String!
+    device: DeviceInput!
+}
+
+input DeviceInput {
+    type: DeviceType!
+}
+
+enum DeviceType {
+    DESKTOP
+    MOBILE_PHONE
+    MOBILE_TABLET
+    APP_PHONE
+    APP_TABLET
+}
+
+input ProductSearchCriteriaInput {
+    booleans: [BooleanValueInput!]
+    counts: [CountValueInput!]
+    ranges: [RangeValueInput!]
+    selections: [SelectionValueInput!]
+}
+
+input BooleanValueInput {
+    id: String!
+    value: Boolean!
+}
+
+input CountValueInput {
+    id: String!
+    value: Int!
+}
+
+input RangeValueInput {
+    id: String!
+    min: Int!
+    max: Int!
+}
+
+input SelectionValueInput {
+    id: String!
+    value: String!
+}
+
+type ProductSearchResults {
+    criteria: ProductSearchCriteria!
+    productSearchListings: [ProductSearchListing!]!
+}
+
+type ProductSearchCriteria {
+    booleans: [BooleanValue!]
+    counts: [CountValue!]
+    ranges: [RangeValue!]
+    selections: [SelectionValue!]
+}
+
+type BooleanValue {
+    id: String!
+    value: Boolean!
+}
+
+type CountValue {
+    id: String!
+    value: Int!
+}
+
+type RangeValue {
+    id: String!
+    min: Int!
+    max: Int!
+}
+
+type SelectionValue {
+    id: String!
+    value: String!
+}
+
+# Placeholder Union for potential varying product search listing types
+union ProductSearchListing = Product
+
+type Product {
+    id: Int!
+    name: String!
+    price: Int!
+}
+
+
+
