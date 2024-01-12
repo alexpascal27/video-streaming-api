@@ -1,8 +1,9 @@
 type Query {
-    productSearch(
-        context: ContextInput!
-        criteria: ProductSearchCriteriaInput
-    ): ProductSearchResults!
+    #productSearch(
+    #    context: ContextInput!
+    #    criteria: ProductSearchCriteriaInput
+    #): ProductSearchResults!
+    productById(id: ID!): Product!
 }
 
 input ContextInput {
@@ -87,7 +88,7 @@ type SelectionValue {
 union ProductSearchListing = Product
 
 type Product {
-    id: Int!
+    id: ID!
     name: String!
     price: Int!
 }
