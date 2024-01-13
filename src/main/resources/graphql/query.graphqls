@@ -1,8 +1,8 @@
 type Query {
-    #productSearch(
-    #    context: ContextInput!
-    #    criteria: ProductSearchCriteriaInput
-    #): ProductSearchResults!
+    productSearch(
+        context: ContextInput!
+        criteria: ProductSearchCriteriaInput
+    ): ProductSearchResults!
     productById(id: ID!): Product!
 }
 

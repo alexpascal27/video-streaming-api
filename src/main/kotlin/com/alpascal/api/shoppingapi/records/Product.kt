@@ -21,5 +21,8 @@ data class Product(
         @JvmStatic
         fun getById(id: String): Product
             = products.find { it.id == id } ?: Product("null", "null", 0)
+
+        fun getAll(): List<Product>
+            = products
     }
 }
