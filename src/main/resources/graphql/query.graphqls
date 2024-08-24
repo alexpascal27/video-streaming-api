@@ -1,6 +1,8 @@
 type Query {
     productSearch: [Product!]
     productById(id: ID!): Product!
+    videoSearch: [Video!]
+    videoById(id: ID!): Video!
 }
 
 input ContextInput {
@@ -88,6 +90,18 @@ type Product {
     id: ID!
     name: String!
     price: Int!
+}
+
+type Video {
+    id: String!,
+    name: String!,
+    duration: String!,
+    iconURL: String!,
+    thumbnailURL: String!,
+    creatorName: String!,
+    viewCount: String!,
+    timeSincePublished: String!,
+    isCreatorVerified: Boolean,
 }
 
 
