@@ -1,4 +1,4 @@
-package com.alpascal.api.shoppingapi
+package com.alpascal.api.videostreamingapi
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
