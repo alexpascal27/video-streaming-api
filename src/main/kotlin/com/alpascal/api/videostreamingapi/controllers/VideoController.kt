@@ -1,7 +1,7 @@
-package com.alpascal.api.shoppingapi.controllers
+package com.alpascal.api.videostreamingapi.controllers
 
-import com.alpascal.api.shoppingapi.records.Video
-import com.alpascal.api.shoppingapi.records.VideoSearchResults
+import com.alpascal.api.videostreamingapi.records.Video
+import com.alpascal.api.videostreamingapi.records.VideoSearchResults
 import org.springframework.graphql.data.method.annotation.Argument
 import org.springframework.graphql.data.method.annotation.QueryMapping
 import org.springframework.stereotype.Controller

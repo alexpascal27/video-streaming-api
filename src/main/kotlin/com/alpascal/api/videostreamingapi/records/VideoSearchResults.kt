@@ -1,4 +1,4 @@
-package com.alpascal.api.shoppingapi.records
+package com.alpascal.api.videostreamingapi.records
 
 data class VideoSearchResults(
     val videoSearchListings: List<Video>,
