@@ -1,5 +1,5 @@
 type Query {
-    videoSearch: [Video!]
+    videoSearch(tag: String): [Video!]
     videoById(id: ID!): Video!
 }
 

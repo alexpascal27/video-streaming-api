@@ -14,5 +14,5 @@ class VideoController {
     ): Video = Video.getById(id)
 
     @QueryMapping
-    fun videoSearch() = VideoSearchResults.videoSearch()
+    fun videoSearch(@Argument tag: String,) = VideoSearchResults.videoSearch(tag)
 }

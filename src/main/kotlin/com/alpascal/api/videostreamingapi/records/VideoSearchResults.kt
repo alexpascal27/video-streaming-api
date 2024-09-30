@@ -5,7 +5,7 @@ data class VideoSearchResults(
 ) {
     companion object {
         @JvmStatic
-        fun videoSearch(): List<Video> = Video.getAll()
+        fun videoSearch(tag: String): List<Video> = Video.getAll(tag)
     }
 }
 
